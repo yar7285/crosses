@@ -14,5 +14,30 @@ class Product {
 }
 
 export default {
+  state: {
+    products: []
+  },
+  getters: {
+    someFunc (state) {
+      return state.products + 1
+    }
+  },
+  mutations: {
+    changeState (state, payload) { // setters ------ payload -> object val
+      state.products = payload
+    }
+  },
+  actions: {
+    getProducts (context, payload) {
+      const products = this.$http.get('products')
+        .then(response => {
+          return response.json()
+        })
+        .then(products => {
+          this.products = products
+        })
 
+      context.commit('changeState', products)
+    }
+  }
 }
