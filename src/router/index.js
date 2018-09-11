@@ -4,6 +4,7 @@ import Home from '@/components/Home'
 import Catalog from '@/components/Catalog'
 import Contact from '@/components/Contact'
 import Product from '@/components/Product'
+import Order from '@/components/Order'
 
 Vue.use(Router)
 
@@ -29,6 +30,12 @@ export default new Router({
       props: true,
       name: 'product',
       component: Product
+    },
+    {
+      path: '/order/:id',
+      props: true,
+      name: 'order',
+      component: Order
     }
   ],
   mode: 'history'

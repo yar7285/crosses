@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html>
+  <!-- HEAD START-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable=no">
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+    <meta name="format-detection" content="telephone=no">
+    <title>MyMiles</title>
+    <link rel="stylesheet" href="../src/assets/css/styles.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  </head>
+  <!-- HEAD END-->
+  <body>
+    <!-- HEADER START-->
+    <header class="header">
+      <div class="header-inner-container-wrapper">
+        <div class="container">
+          <div class="header-inner">
+            <div class="row">
+              <!--видимая часть для зарегистрированных пользователей-->
+              <div class="col-sm-8 hidden-xs"><a class="logo" href="javascript:void(0);"><img src="img/logo.svg" alt="MyMiles Logo" data-no-svg="true"></a></div>
+              <div class="col-xs-20 col-sm-12">
+                <div class="top-nav-elmnts"><a class="menu-burger visible-xs" id="menuBurgerbutton" href="javascript:void(0)" data-toggle="offcanvas" data-recalc="false" data-target="#myMenu"><img src="img/icns/burger.svg"></a>
+                  <button class="search-btn"><img src="img/icns/search.svg"></button><a class="logo visible-xs" href="javascript:void(0);"><img src="img/logo.svg" alt="MyMiles Logo" data-no-svg="true"></a><a class="cart-btn" id="headerCartBtn" href="javascript:void(0)"><img src="img/icns/cart.svg">
+                    <div class="cart-indicator"><span></span></div></a>
+                  <div class="active-usrs-name-wrapper"><a class="active-usrs-name" href="javascript:void(0)">
+                      <div class="usrs-icn"><img src="img/icns/user-fill.svg"></div><span class="hidden-xs">marina.soroka@gmail.com</span></a></div>
+                </div>
+              </div>
+              <!--выпадающий блок поиска-->
+              <div class="header-search-block">
+                <div class="header-search-block-inn">
+                  <div class="close-wrapp">
+                    <button class="close" id="searchClose" type="button"><img src="img/icns/close.svg"></button>
+                  </div>
+                  <form class="search-form">
+                    <div class="search-input-wrapp">
+                      <input class="input-search" type="search" name="search" id="search" placeholder="Что Вас интересует?" autocomplete="off">
+                    </div>
+                    <div class="search-submit-wrapp">
+                      <input class="btn btn-green btn-lg" type="submit" value="Найти">
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <!--выпадающее превью корзины-->
+              <div class="header-cart-block" id="headerCartBlck">
+                <div class="header-cart-head">
+                  <div class="header-cart-title">Корзина</div>
+                  <div class="header-cart-itms"><span class="cart-itms-count"></span>
+                    <spab>&nbsp;товаров</spab>
+                  </div>
+                </div>
+                <button class="close" id="headerCartClose"><img src="img/icns/close.svg"></button>
+                <div class="product-cart-container">
+                  <ul class="header-cart-list">
+                                        <li class="product-cart-itm-wrapper">
+                                          <div class="product-cart-itm">
+                                            <div class="delete-btn-wrapp">
+                                              <button class="delete-btn"><img src="img/icns/delete.svg"></button>
+                                            </div><a class="product-cart-thumb" href="javascript:void(0)"><img class="product-cart-image" src="img/itms/ked-itm.png" alt="ked-itm"></a>
+                                            <div class="product-cart-description"><a class="product-link" href="javascript:void(0)">Adidas Stan Smith White Metallic салатовые</a>
+                                              <div class="product-cart-speciality">
+                                                <div class="product-price">
+                                                  <div class="title">Цена:&nbsp;&nbsp;</div>
+                                                  <div class="value" data-price="1000"><span class="cart-price">1000</span><span>&nbsp;грн.</span></div>
+                                                </div>
+                                                <div class="product-size">
+                                                  <div class="title">Розмер:&nbsp;&nbsp;</div>
+                                                  <div class="value">38</div>
+                                                </div>
+                                                <div class="product-cart-quantity">
+                                                  <div class="title">Кол-во:</div>
+                                                  <div class="value">
+                                                    <input class="input-number cart-quantity" type="text" name="quant[1]" value="1" min="1" max="10">
+                                                    <div class="increment-btns">
+                                                      <button class="btn-number btn-number-plus" data-type="plus" data-field="quant[1]"></button>
+                                                      <button class="btn-number btn-number-minus" data-type="minus" data-field="quant[1]"></button>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </li>
+                                        <li class="product-cart-itm-wrapper">
+                                          <div class="product-cart-itm">
+                                            <div class="delete-btn-wrapp">
+                                              <button class="delete-btn"><img src="img/icns/delete.svg"></button>
+                                            </div><a class="product-cart-thumb" href="javascript:void(0)"><img class="product-cart-image" src="img/itms/ked2-itm.png" alt="ked2-itm"></a>
+                                            <div class="product-cart-description"><a class="product-link" href="javascript:void(0)">Adidas Stan Smith White Metallic красные</a>
+                                              <div class="product-cart-speciality">
+                                                <div class="product-price">
+                                                  <div class="title">Цена:&nbsp;&nbsp;</div>
+                                                  <div class="value" data-price="1000"><span class="cart-price">1000</span><span>&nbsp;грн.</span></div>
+                                                </div>
+                                                <div class="product-size">
+                                                  <div class="title">Розмер:&nbsp;&nbsp;</div>
+                                                  <div class="value">41</div>
+                                                </div>
+                                                <div class="product-cart-quantity">
+                                                  <div class="title">Кол-во:</div>
+                                                  <div class="value">
+                                                    <input class="input-number cart-quantity" type="text" name="quant[2]" value="1" min="1" max="10">
+                                                    <div class="increment-btns">
+                                                      <button class="btn-number btn-number-plus" data-type="plus" data-field="quant[2]"></button>
+                                                      <button class="btn-number btn-number-minus" data-type="minus" data-field="quant[2]"></button>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </li>
+                                        <li class="product-cart-itm-wrapper">
+                                          <div class="product-cart-itm">
+                                            <div class="delete-btn-wrapp">
+                                              <button class="delete-btn"><img src="img/icns/delete.svg"></button>
+                                            </div><a class="product-cart-thumb" href="javascript:void(0)"><img class="product-cart-image" src="img/itms/ked3-itm.png" alt="ked3-itm"></a>
+                                            <div class="product-cart-description"><a class="product-link" href="javascript:void(0)">Adidas Stan Smith White синие</a>
+                                              <div class="product-cart-speciality">
+                                                <div class="product-price">
+                                                  <div class="title">Цена:&nbsp;&nbsp;</div>
+                                                  <div class="value" data-price="1000"><span class="cart-price">1000</span><span>&nbsp;грн.</span></div>
+                                                </div>
+                                                <div class="product-size">
+                                                  <div class="title">Розмер:&nbsp;&nbsp;</div>
+                                                  <div class="value">39</div>
+                                                </div>
+                                                <div class="product-cart-quantity">
+                                                  <div class="title">Кол-во:</div>
+                                                  <div class="value">
+                                                    <input class="input-number cart-quantity" type="text" name="quant[3]" value="1" min="1" max="10">
+                                                    <div class="increment-btns">
+                                                      <button class="btn-number btn-number-plus" data-type="plus" data-field="quant[3]"></button>
+                                                      <button class="btn-number btn-number-minus" data-type="minus" data-field="quant[3]"></button>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </li>
+                  </ul>
+                  <div class="product-cart-footer">
+                    <div class="product-cart-total">
+                      <div class="product-cart-total-text">Общая стоимость:</div>
+                      <div class="product-cart-total-price"><span class="product-cart-total-price-value"></span><span>  &nbsp;грн.</span></div>
+                    </div>
+                    <div class="header-cart-link-wrapper"><a class="btn btn-green btn-xs" href="javascript:void(0)">Оформить заказ</a></div>
+                    <div class="empty-cart-mess">Корзина пуста</div>
+                  </div>
+                </div>
+              </div>
+              <!--выпадающее менюдля зарегистрированных пользователей-->
+              <div class="navmenu-fixed-right offcanvas-xs" id="myMenu">
+                <div class="mobile-mnu-top">
+                  <div class="logo"><img src="img/logo.svg" alt="MyMiles Logo" data-no-svg="true"></div>
+                  <div class="cancel-wrapper">
+                    <button class="cancel"><i><img src="img/icns/close.svg"></i><span>Закрыть</span></button>
+                  </div>
+                </div>
+                <div class="main-navigation-mnu">
+                  <ul class="main-navigation-mnu-list">
+                    <!-- класс .active определяет цвет выделенного пункта меню-->
+                                        <li class="main-navigation-mnu-itm"><a class="main-navigation-mnu-link active" href="javascript:void(0)">
+                                            <div class="main-navigation-mnu-icn"><img src="img/menu-icns/catalogue.svg"></div>
+                                            <div class="main-navigation-mnu-itm-extension">
+                                              <div class="main-navigation-mnu-itm-name"><span>Каталог</span></div>
+                                            </div></a></li>
+                                        <li class="main-navigation-mnu-itm"><a class="main-navigation-mnu-link" href="javascript:void(0)">
+                                            <div class="main-navigation-mnu-icn"><img src="img/menu-icns/favourite.svg"></div>
+                                            <div class="main-navigation-mnu-itm-extension">
+                                              <div class="main-navigation-mnu-itm-name"><span>Избранное</span></div>
+                                            </div></a></li>
+                                        <li class="main-navigation-mnu-itm"><a class="main-navigation-mnu-link" href="javascript:void(0)">
+                                            <div class="main-navigation-mnu-icn"><img src="img/menu-icns/reserved.svg"></div>
+                                            <div class="main-navigation-mnu-itm-extension">
+                                              <div class="main-navigation-mnu-itm-name"><span>Резерв</span></div>
+                                            </div></a></li>
+                                        <li class="main-navigation-mnu-itm"><a class="main-navigation-mnu-link" href="javascript:void(0)">
+                                            <div class="main-navigation-mnu-icn"><img src="img/menu-icns/delivery.svg"></div>
+                                            <div class="main-navigation-mnu-itm-extension">
+                                              <div class="main-navigation-mnu-itm-name"><span>Жду в наличии</span></div>
+                                            </div></a></li>
+                                        <li class="main-navigation-mnu-itm"><a class="main-navigation-mnu-link" href="javascript:void(0)">
+                                            <div class="main-navigation-mnu-icn"><img src="img/menu-icns/notifications.svg"></div>
+                                            <div class="main-navigation-mnu-itm-extension">
+                                              <div class="main-navigation-mnu-itm-name"><span>Уведомления</span></div>
+                                              <div class="main-navigation-mnu-itm-indicator"><span>1</span></div>
+                                            </div></a></li>
+                                        <li class="main-navigation-mnu-itm"><a class="main-navigation-mnu-link" href="javascript:void(0)">
+                                            <div class="main-navigation-mnu-icn"><img src="img/menu-icns/wallet.svg"></div>
+                                            <div class="main-navigation-mnu-itm-extension">
+                                              <div class="main-navigation-mnu-itm-name"><span>Мой счет</span></div>
+                                              <div class="main-navigation-mnu-itm-indicator"><span>+500</span></div>
+                                            </div></a></li>
+                                        <li class="main-navigation-mnu-itm"><a class="main-navigation-mnu-link" href="javascript:void(0)">
+                                            <div class="main-navigation-mnu-icn"><img src="img/menu-icns/history.svg"></div>
+                                            <div class="main-navigation-mnu-itm-extension">
+                                              <div class="main-navigation-mnu-itm-name"><span>Мои заказы</span></div>
+                                            </div></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- HEADER END-->
+    <div class="order-page">
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="order-contetnt col-xs-20 col-sm-18 col-sm-offset-2 col-lg-16 col-lg-offset-4">
+              <div class="row head-row">
+                <div class="col-xs-20">
+                  <h1 class="heading-decorated"><span class="text-trasformed">Заказ&nbsp;</span>№12345 от 28.04.17</h1>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-20">
+                  <div class="order-specifications">
+                    <div class="order-specification">
+                      <dl>
+                        <dt>Статус оплаты:</dt>
+                        <dd>Оплачено</dd>
+                      </dl>
+                      <dl>
+                        <dt>Статус доставки:</dt>
+                        <dd>Товар в пути</dd>
+                      </dl>
+                      <dl>
+                        <dt>Статус моего дохода:</dt>
+                        <dd>
+                          Будет зачислен через&nbsp;<span id="restOfTime1"></span></dd>
+                      </dl>
+                      <dl>
+                        <dt>Номер ТТН:</dt>
+                        <dd>005050732324256</dd>
+                      </dl>
+                      <dl>
+                        <dt>Ожидаемая дата доставки:</dt>
+                        <dd class="date">16.08.17</dd>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-20">
+                  <h2 class="heading-cloudy-decorated"><span>Стоимость</span></h2>
+                  <div class="order-value">
+                    <dl>
+                      <dt>Общая стоимость:</dt>
+                      <dd>13 510 грн.</dd>
+                    </dl>
+                    <dl>
+                      <dt>Покупатель платит:</dt>
+                      <dd>6 510 грн.</dd>
+                    </dl>
+                    <dl>
+                      <dt>Мой доход:</dt>
+                      <dd>7 000 грн.</dd>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-20">
+                  <h2 class="heading-cloudy-decorated"><span>Оплата и доставка</span></h2>
+                  <div class="order-payment">
+                    <dl>
+                      <dt>Товар будет получать:</dt>
+                      <dd><span class="pseudo-radio">Мой покупатель</span>
+                        <div class="input-wrapp">
+                          <input class="input input-readonly" type="text" readonly value="Васильева Наталья Павловна">
+                        </div>
+                        <div class="input-wrapp">
+                          <input class="input input-readonly" type="tel" readonly value="+38 067 23 23 789">
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl>
+                      <dt>Товар будет оплачивать:</dt>
+                      <dd><span class="pseudo-radio">Мой покупатель</span></dd>
+                    </dl>
+                    <dl>
+                      <dt>Способ оплаты:</dt>
+                      <dd><span class="pseudo-radio">Наличными при получении / наложенный платеж</span></dd>
+                    </dl>
+                    <dl>
+                      <dt>Способ доставки:</dt>
+                      <dd><span class="pseudo-radio">Самовывоз (г. Киев, ул. Десятинная, 12)</span></dd>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-20">
+                  <h2 class="heading-cloudy-decorated"><span>Детали заказа</span></h2>
+                  <div class="order-itms">
+                                        <div class="order-itm"><a class="order-itm-main" href="javascript:void(0);">
+                                            <div class="itm-img"><img src="img/itms/ked-itm.png" alt="Adidas Stan Smith White Metallic"></div>
+                                            <div class="itm-descr">
+                                              <div class="itm-title">Adidas Stan Smith White Metallic</div>
+                                              <div class="itm-size"><span class="itm-prop-title">Размер:&emsp;</span><span class="itm-prop-val">38</span></div>
+                                              <div class="itm-price"><span class="itm-prop-title">Цен а:&emsp;</span><span class="itm-prop-val">900<span class="currency">&nbsp;грн.</span></span></div>
+                                              <div class="itm-quantity"><span class="itm-prop-title">Кол-во:&emsp;</span><span class="itm-prop-val">1</span></div>
+                                            </div></a>
+                                          <div class="order-itm-bargain">
+                                            <div class="labeled-input">
+                                              <!-- TODO: добавление валюты при смене значения поля-->
+                                              <input class="readonly" type="text" readonly value="2 100 грн.">
+                                              <label>Моя цена:</label>
+                                            </div>
+                                          </div>
+                                          <div class="order-itm-action">
+                                            <div class="make-refund-btn">
+                                              <button class="btn btn-gray btn-xs" type="button" data-toggle="modal" data-target="#returnItemModal">Оформить возврат</button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="order-itm"><a class="order-itm-main" href="javascript:void(0);">
+                                            <div class="itm-img"><img src="img/itms/ked2-itm.png" alt="Adidas Stan Smith White Metallic"></div>
+                                            <div class="itm-descr">
+                                              <div class="itm-title">Adidas Stan Smith White Metallic</div>
+                                              <div class="itm-size"><span class="itm-prop-title">Размер:&emsp;</span><span class="itm-prop-val">40</span></div>
+                                              <div class="itm-price"><span class="itm-prop-title">Цен а:&emsp;</span><span class="itm-prop-val">2000<span class="currency">&nbsp;грн.</span></span></div>
+                                              <div class="itm-quantity"><span class="itm-prop-title">Кол-во:&emsp;</span><span class="itm-prop-val">2</span></div>
+                                            </div></a>
+                                          <div class="order-itm-bargain">
+                                            <div class="labeled-input">
+                                              <!-- TODO: добавление валюты при смене значения поля-->
+                                              <input class="readonly" type="text" readonly value="2 100 грн.">
+                                              <label>Моя цена:</label>
+                                            </div>
+                                          </div>
+                                          <div class="order-itm-action">
+                                            <div class="make-refund-btn">
+                                              <button class="btn btn-gray btn-xs" type="button" data-toggle="modal" data-target="#returnItemModal">Оформить возврат</button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="order-itm"><a class="order-itm-main" href="javascript:void(0);">
+                                            <div class="itm-img"><img src="img/itms/ked3-itm.png" alt="Adidas Stan Smith White"></div>
+                                            <div class="itm-descr">
+                                              <div class="itm-title">Adidas Stan Smith White</div>
+                                              <div class="itm-size"><span class="itm-prop-title">Размер:&emsp;</span><span class="itm-prop-val">42</span></div>
+                                              <div class="itm-price"><span class="itm-prop-title">Цен а:&emsp;</span><span class="itm-prop-val">1200<span class="currency">&nbsp;грн.</span></span></div>
+                                              <div class="itm-quantity"><span class="itm-prop-title">Кол-во:&emsp;</span><span class="itm-prop-val">3</span></div>
+                                            </div></a>
+                                          <div class="order-itm-bargain">
+                                            <div class="labeled-input">
+                                              <!-- TODO: добавление валюты при смене значения поля-->
+                                              <input class="readonly" type="text" readonly value="2 100 грн.">
+                                              <label>Моя цена:</label>
+                                            </div>
+                                          </div>
+                                          <div class="order-itm-action">
+                                            <div class="make-refund-btn">
+                                              <button class="btn btn-gray btn-xs" type="button" data-toggle="modal" data-target="#returnItemModal">Оформить возврат</button>
+                                            </div>
+                                          </div>
+                                        </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-20">
+                  <h2 class="heading-cloudy-decorated"><span>Комментарии</span></h2>
+                  <div class="order-comment">
+                    <p>Впервые представленные как кроссовки для бега нового поколения, кроссовки Nike Air Max Huarache являлись находкой для не профессиональных бегунов. В первую очередь благодаря революционной технологии амортизации, которая отныне стала видимой в блоке подошвы. Эта технология уникальна и нигде больше не используется. Согласно её инструкции специалисты компании Nike создают особый баллон. По инструкции он должен быть создан из полиуретанового пластика, затем его накачивают инертным газом. Затем вставляют в подошву.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-20">
+                  <div class="return-btn-wrapp">
+                    <button class="btn btn-gray btn-lg" type="button" data-toggle="modal" data-target="#returnItemsModal">Возврат всего заказа</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- modal window "Purchase returns"-->
+    <div class="modal fade" id="returnItemModal" tabindex="-1" role="dialog" aria-labelledby="returnItemModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="close-wrapp">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><img src="img/icns/close.svg"></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-text-center">
+              <p>Вы действительно желаете<br>вернуть товар?</p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn-cancel" type="button" data-dismiss="modal">Отмена</button>
+            <button class="confirmationReturnBtn btn btn-xs btn-gray" type="button">Оформить возврат</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal window "Purchase returns End-->
+    <!-- modal window "Purchase returns all"-->
+    <div class="modal fade" id="returnItemsModal" tabindex="-1" role="dialog" aria-labelledby="returnItemModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="close-wrapp">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><img src="img/icns/close.svg"></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-text-center">
+              <p>Вы действительно желаете<br>вернуть все товары?</p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn-cancel" type="button" data-dismiss="modal">Отмена</button>
+            <button class="confirmationReturnBtn btn btn-xs btn-gray" type="button">Оформить возврат</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal window "Purchase returns all" End-->
+    <!-- modal window "Purchase returns"-->
+    <div class="modal fade" id="managerFeedbackModal" tabindex="-1" role="dialog" aria-labelledby="returnItemModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="close-wrapp">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><img src="img/icns/close.svg"></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-text-center">
+              <p>Менеджер свяжется с Вами<br>в ближайшее время</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal window "Purchase returns End-->
+    <!-- modal window "Invalid value"-->
+    <div class="modal fade" id="invalidValueModal" tabindex="-1" role="dialog" aria-labelledby="moderatMessModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="close-wrapp">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><img src="img/icns/close.svg"></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-text-center">
+              <p>Извините, это значение недопустимо</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal window "Invalid value" End-->
+    <!-- FOOTER START-->
+    <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#main-block"><span></span></a></div>
+    <!-- FOOTER END-->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-20">
+            <div class="footer-info">
+              <div class="left-part"><a class="logo" href="javascript:void(0);"><img src="img/logo-footer.svg" alt="MyMiles Logo"></a></div>
+              <div class="right-part">
+                <div class="footer-link-wrapper"><a class="footer-link" href="javascript:void(0);">Условия сотрудничества</a><a class="footer-link" href="javascript:void(0);">Наши контакты</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <!-- SCRIPTS START-->
+  <script src="js/jquery/jquery-2.2.4.min.js"></script>
+  <script src="js/bootstrap/bootstrap.min.js"></script>
+  <script src="js/bootstrap-validator/validator.min.js"></script>
+  <script src="js/bootstrap-select/bootstrap-select.min.js"></script>
+  <script src="js/ofi/ofi.min.js"></script>
+  <script src="js/jasny-bootstrap/js/jasny-bootstrap.min.js"></script>
+  <script src="js/bee3d/classie.js"></script>
+  <script src="js/bee3d/bee3d.js"></script>
+  <script src="js/common.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFgZRCElzR0MHQ9kNfHpMcFWwzbvSnZH0"></script>
+  <!-- SCRIPTS END-->
+  <script>
+    // Скрипт для счетчиков
+    // https://stackoverflow.com/questions/33009369/having-multiple-countdown-timer-in-javascript-with-dynamic-arguments
+    // http://jsfiddle.net/Twisty/joocqakz/
+    var incomeTimeData = [];
+    function secondBalance(row) {
+        var seconds = incomeTimeData[row].remaining;
+        var minutes = Math.round((seconds - 30) / 60);
+        var hours = Math.round((minutes - 30) / 60);
+        var remainingMinutes = minutes % 60;
+        if (remainingMinutes < 10) {
+            remainingMinutes = "0" + remainingMinutes;
+        }
+        if (seconds < 60) {
+            remainingMinutes = "01";
+        }
+        $("#restOfTime" + row).html(hours + " ч " + remainingMinutes + " мин");
+        if (seconds === 0) {
+            clearInterval(incomeTimeData[row].timerId);
+            $("#restOfTime" + row).html("Зачислен").siblings('.timer-title').remove();
+        } else {
+            seconds--;
+        }
+        incomeTimeData[row].remaining = seconds;
+    }
+    function timer(row, sec) {
+        incomeTimeData[row] = {
+            remaining: sec,
+            timerId: setInterval(function () {
+                secondBalance(row);
+            }, 1000)
+        };
+        var sec = incomeTimeData[row].timerId;
+    }
+    timer(1, 10800);
+    // Скрипт вызова окна "Менеджер свяжется с Вами"
+    $('#confirmationReturnBtn').on('click', function () {
+        $('#returnItemModal').modal('hide');
+        $('#managerFeedbackModal').modal('show');
+    });
+  </script>
+</html>

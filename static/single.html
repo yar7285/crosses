@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+  <!-- HEAD START-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable=no">
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+    <meta name="format-detection" content="telephone=no">
+    <title>MyMiles</title>
+    <link rel="stylesheet" href="../src/assets/css/styles.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  </head>
+  <!-- HEAD END-->
+  <body>
+    <!-- HEADER START-->
+    <header class="header">
+      <div class="header-inner-container-wrapper">
+        <div class="container">
+          <div class="header-inner">
+            <div class="row">
+              <!--видимая часть для зарегистрированных пользователей-->
+              <div class="col-sm-8 hidden-xs"><a class="logo" href="javascript:void(0);"><img src="img/logo.svg" alt="MyMiles Logo" data-no-svg="true"></a></div>
+              <div class="col-xs-20 col-sm-12">
+                <div class="top-nav-elmnts"><a class="menu-burger visible-xs" id="menuBurgerbutton" href="javascript:void(0)" data-toggle="offcanvas" data-recalc="false" data-target="#myMenu"><img src="img/icns/burger.svg"></a>
+                  <button class="search-btn"><img src="img/icns/search.svg"></button><a class="logo visible-xs" href="javascript:void(0);"><img src="img/logo.svg" alt="MyMiles Logo" data-no-svg="true"></a><a class="cart-btn" id="headerCartBtn" href="javascript:void(0)"><img src="img/icns/cart.svg">
+                    <div class="cart-indicator"><span></span></div></a>
+                  <div class="active-usrs-name-wrapper"><a class="active-usrs-name" href="javascript:void(0)">
+                      <div class="usrs-icn"><img src="img/icns/user-fill.svg"></div><span class="hidden-xs">marina.soroka@gmail.com</span></a></div>
+                </div>
+              </div>
+              <!--выпадающий блок поиска-->
+              <div class="header-search-block">
+                <div class="header-search-block-inn">
+                  <div class="close-wrapp">
+                    <button class="close" id="searchClose" type="button"><img src="img/icns/close.svg"></button>
+                  </div>
+                  <form class="search-form">
+                    <div class="search-input-wrapp">
+                      <input class="input-search" type="search" name="search" id="search" placeholder="Что Вас интересует?" autocomplete="off">
+                    </div>
+                    <div class="search-submit-wrapp">
+                      <input class="btn btn-green btn-lg" type="submit" value="Найти">
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <!--выпадающее превью корзины-->
+              <div class="header-cart-block" id="headerCartBlck">
+                <div class="header-cart-head">
+                  <div class="header-cart-title">Корзина</div>
+                  <div class="header-cart-itms"><span class="cart-itms-count"></span>
+                    <spab>&nbsp;товаров</spab>
+                  </div>
+                </div>
+                <button class="close" id="headerCartClose"><img src="img/icns/close.svg"></button>
+                <div class="product-cart-container">
+                  <ul class="header-cart-list">
+                                        <li class="product-cart-itm-wrapper">
+                                          <div class="product-cart-itm">
+                                            <div class="delete-btn-wrapp">
+                                              <button class="delete-btn"><img src="img/icns/delete.svg"></button>
+                                            </div><a class="product-cart-thumb" href="javascript:void(0)"><img class="product-cart-image" src="img/itms/ked-itm.png" alt="ked-itm"></a>
+                                            <div class="product-cart-description"><a class="product-link" href="javascript:void(0)">Adidas Stan Smith White Metallic салатовые</a>
+                                              <div class="product-cart-speciality">
+                                                <div class="product-price">
+                                                  <div class="title">Цена:&nbsp;&nbsp;</div>
+                                                  <div class="value" data-price="1000"><span class="cart-price">1000</span><span>&nbsp;грн.</span></div>
+                                                </div>
+                                                <div class="product-size">
+                                                  <div class="title">Розмер:&nbsp;&nbsp;</div>
+                                                  <div class="value">38</div>
+                                                </div>
+                                                <div class="product-cart-quantity">
+                                                  <div class="title">Кол-во:</div>
+                                                  <div class="value">
+                                                    <input class="input-number cart-quantity" type="text" name="quant[1]" value="1" min="1" max="10">
+                                                    <div class="increment-btns">
+                                                      <button class="btn-number btn-number-plus" data-type="plus" data-field="quant[1]"></button>
+                                                      <button class="btn-number btn-number-minus" data-type="minus" data-field="quant[1]"></button>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </li>
+                                        <li class="product-cart-itm-wrapper">
+                                          <div class="product-cart-itm">
+                                            <div class="delete-btn-wrapp">
+                                              <button class="delete-btn"><img src="img/icns/delete.svg"></button>
+                                            </div><a class="product-cart-thumb" href="javascript:void(0)"><img class="product-cart-image" src="img/itms/ked2-itm.png" alt="ked2-itm"></a>
+                                            <div class="product-cart-description"><a class="product-link" href="javascript:void(0)">Adidas Stan Smith White Metallic красные</a>
+                                              <div class="product-cart-speciality">
+                                                <div class="product-price">
+                                                  <div class="title">Цена:&nbsp;&nbsp;</div>
+                                                  <div class="value" data-price="1000"><span class="cart-price">1000</span><span>&nbsp;грн.</span></div>
+                                                </div>
+                                                <div class="product-size">
+                                                  <div class="title">Розмер:&nbsp;&nbsp;</div>
+                                                  <div class="value">41</div>
+                                                </div>
+                                                <div class="product-cart-quantity">
+                                                  <div class="title">Кол-во:</div>
+                                                  <div class="value">
+                                                    <input class="input-number cart-quantity" type="text" name="quant[2]" value="1" min="1" max="10">
+                                                    <div class="increment-btns">
+                                                      <button class="btn-number btn-number-plus" data-type="plus" data-field="quant[2]"></button>
+                                                      <button class="btn-number btn-number-minus" data-type="minus" data-field="quant[2]"></button>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </li>
+                                        <li class="product-cart-itm-wrapper">
+                                          <div class="product-cart-itm">
+                                            <div class="delete-btn-wrapp">
+                                              <button class="delete-btn"><img src="img/icns/delete.svg"></button>
+                                            </div><a class="product-cart-thumb" href="javascript:void(0)"><img class="product-cart-image" src="img/itms/ked3-itm.png" alt="ked3-itm"></a>
+                                            <div class="product-cart-description"><a class="product-link" href="javascript:void(0)">Adidas Stan Smith White синие</a>
+                                              <div class="product-cart-speciality">
+                                                <div class="product-price">
+                                                  <div class="title">Цена:&nbsp;&nbsp;</div>
+                                                  <div class="value" data-price="1000"><span class="cart-price">1000</span><span>&nbsp;грн.</span></div>
+                                                </div>
+                                                <div class="product-size">
+                                                  <div class="title">Розмер:&nbsp;&nbsp;</div>
+                                                  <div class="value">39</div>
+                                                </div>
+                                                <div class="product-cart-quantity">
+                                                  <div class="title">Кол-во:</div>
+                                                  <div class="value">
+                                                    <input class="input-number cart-quantity" type="text" name="quant[3]" value="1" min="1" max="10">
+                                                    <div class="increment-btns">
+                                                      <button class="btn-number btn-number-plus" data-type="plus" data-field="quant[3]"></button>
+                                                      <button class="btn-number btn-number-minus" data-type="minus" data-field="quant[3]"></button>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </li>
+                  </ul>
+                  <div class="product-cart-footer">
+                    <div class="product-cart-total">
+                      <div class="product-cart-total-text">Общая стоимость:</div>
+                      <div class="product-cart-total-price"><span class="product-cart-total-price-value"></span><span>  &nbsp;грн.</span></div>
+                    </div>
+                    <div class="header-cart-link-wrapper"><a class="btn btn-green btn-xs" href="javascript:void(0)">Оформить заказ</a></div>
+                    <div class="empty-cart-mess">Корзина пуста</div>
+                  </div>
+                </div>
+              </div>
+              <!--выпадающее менюдля зарегистрированных пользователей-->
+              <div class="navmenu-fixed-right offcanvas-xs" id="myMenu">
+                <div class="mobile-mnu-top">
+                  <div class="logo"><img src="img/logo.svg" alt="MyMiles Logo" data-no-svg="true"></div>
+                  <div class="cancel-wrapper">
+                    <button class="cancel"><i><img src="img/icns/close.svg"></i><span>Закрыть</span></button>
+                  </div>
+                </div>
+                <div class="main-navigation-mnu">
+                  <ul class="main-navigation-mnu-list">
+                    <!-- класс .active определяет цвет выделенного пункта меню-->
+                                        <li class="main-navigation-mnu-itm"><a class="main-navigation-mnu-link active" href="javascript:void(0)">
+                                            <div class="main-navigation-mnu-icn"><img src="img/menu-icns/catalogue.svg"></div>
+                                            <div class="main-navigation-mnu-itm-extension">
+                                              <div class="main-navigation-mnu-itm-name"><span>Каталог</span></div>
+                                            </div></a></li>
+                                        <li class="main-navigation-mnu-itm"><a class="main-navigation-mnu-link" href="javascript:void(0)">
+                                            <div class="main-navigation-mnu-icn"><img src="img/menu-icns/favourite.svg"></div>
+                                            <div class="main-navigation-mnu-itm-extension">
+                                              <div class="main-navigation-mnu-itm-name"><span>Избранное</span></div>
+                                            </div></a></li>
+                                        <li class="main-navigation-mnu-itm"><a class="main-navigation-mnu-link" href="javascript:void(0)">
+                                            <div class="main-navigation-mnu-icn"><img src="img/menu-icns/reserved.svg"></div>
+                                            <div class="main-navigation-mnu-itm-extension">
+                                              <div class="main-navigation-mnu-itm-name"><span>Резерв</span></div>
+                                            </div></a></li>
+                                        <li class="main-navigation-mnu-itm"><a class="main-navigation-mnu-link" href="javascript:void(0)">
+                                            <div class="main-navigation-mnu-icn"><img src="img/menu-icns/delivery.svg"></div>
+                                            <div class="main-navigation-mnu-itm-extension">
+                                              <div class="main-navigation-mnu-itm-name"><span>Жду в наличии</span></div>
+                                            </div></a></li>
+                                        <li class="main-navigation-mnu-itm"><a class="main-navigation-mnu-link" href="javascript:void(0)">
+                                            <div class="main-navigation-mnu-icn"><img src="img/menu-icns/notifications.svg"></div>
+                                            <div class="main-navigation-mnu-itm-extension">
+                                              <div class="main-navigation-mnu-itm-name"><span>Уведомления</span></div>
+                                              <div class="main-navigation-mnu-itm-indicator"><span>1</span></div>
+                                            </div></a></li>
+                                        <li class="main-navigation-mnu-itm"><a class="main-navigation-mnu-link" href="javascript:void(0)">
+                                            <div class="main-navigation-mnu-icn"><img src="img/menu-icns/wallet.svg"></div>
+                                            <div class="main-navigation-mnu-itm-extension">
+                                              <div class="main-navigation-mnu-itm-name"><span>Мой счет</span></div>
+                                              <div class="main-navigation-mnu-itm-indicator"><span>+500</span></div>
+                                            </div></a></li>
+                                        <li class="main-navigation-mnu-itm"><a class="main-navigation-mnu-link" href="javascript:void(0)">
+                                            <div class="main-navigation-mnu-icn"><img src="img/menu-icns/history.svg"></div>
+                                            <div class="main-navigation-mnu-itm-extension">
+                                              <div class="main-navigation-mnu-itm-name"><span>Мои заказы</span></div>
+                                            </div></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- HEADER END-->
+    <div class="single-page">
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="single-contetnt col-xs-20 col-sm-18 col-sm-offset-2 col-lg-16 col-lg-offset-4">
+              <div class="row single-itm-tabs-row">
+                <div class="col-xs-20 col-sm-11">
+                  <div class="single-itm-tabs">
+                    <div class="nav-tabs-wrapper">
+                      <ul class="nav nav-tabs" role="tablist">
+                        <li class="active" role="presentation"><a href="#studioSliderPhotosTab" aria-controls="studioSliderPhotosTab" role="tab" data-toggle="tab">PROMO фото</a></li>
+                        <li role="presentation"><a href="#liveSliderPhotosTab" aria-controls="liveSliderPhotosTab" role="tab" data-toggle="tab">LIVE фото</a></li>
+                      </ul>
+                    </div>
+                    <div class="tab-content">
+                      <div class="tab-pane active" id="studioSliderPhotosTab" role="tabpanel">
+                        <div class="itm-carousels-wrapper">
+                          <div class="bee3D--parent" id="sliderStudioPhotos">
+                            <section class="bee3D--slide"><img src="img/itm-photos/photostudio1.jpg" alt="NIKE AIR HUARACHE Live Photo"></section>
+                            <section class="bee3D--slide"><img src="img/itm-photos/photostudio2.jpg" alt="NIKE AIR HUARACHE Live Photo"></section>
+                            <section class="bee3D--slide"><img src="img/itm-photos/photostudio3.jpg" alt="NIKE AIR HUARACHE Live Photo"></section>
+                            <section class="bee3D--slide"><img src="img/itm-photos/photostudio2.jpg" alt="NIKE AIR HUARACHE Live Photo"></section>
+                            <section class="bee3D--slide"><img src="img/itm-photos/photostudio3.jpg" alt="NIKE AIR HUARACHE Live Photo"></section>
+                            <div class="bee3D-nav-btns"><span class="bee3D--nav bee3D--nav__prev"></span><span class="bee3D--nav bee3D--nav__next"></span></div>
+                          </div>
+                        </div>
+                        <div class="download-link"><a href="javascript:void(0);">Скачать PROMO фото</a></div>
+                      </div>
+                      <div class="tab-pane" id="liveSliderPhotosTab" role="tabpanel">
+                        <div class="itm-carousels-wrapper">
+                          <div class="bee3D--parent" id="sliderLivePhotos">
+                            <section class="bee3D--slide"><img src="img/itm-photos/photolive1.jpg" alt="NIKE AIR HUARACHE Live Photo"></section>
+                            <section class="bee3D--slide"><img src="img/itm-photos/photolive2.jpg" alt="NIKE AIR HUARACHE Live Photo"></section>
+                            <section class="bee3D--slide"><img src="img/itm-photos/photolive3.jpg" alt="NIKE AIR HUARACHE Live Photo"></section>
+                            <section class="bee3D--slide"><img src="img/itm-photos/photolive1.jpg" alt="NIKE AIR HUARACHE Live Photo"></section>
+                            <section class="bee3D--slide"><img src="img/itm-photos/photolive2.jpg" alt="NIKE AIR HUARACHE Live Photo"></section>
+                            <section class="bee3D--slide"><img src="img/itm-photos/photolive1.jpg" alt="NIKE AIR HUARACHE Live Photo"></section>
+                            <section class="bee3D--slide"><img src="img/itm-photos/photolive2.jpg" alt="NIKE AIR HUARACHE Live Photo"></section>
+                            <div><span class="bee3D--nav bee3D--nav__prev-fill"></span><span class="bee3D--nav bee3D--nav__next-fill"></span></div>
+                          </div>
+                        </div>
+                        <div class="download-link"><a href="javascript:void(0);">Скачать LIVE фото</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-20 col-sm-8 col-sm-offset-1 single-itm-description-col">
+                  <div class="single-itm-description">
+                    <div class="single-itm-head">
+                      <h1 class="h1 single-itm-title">Nike AIR HUARACHE</h1>
+                      <div class="single-itm-price visible-xs">1200<span class="currency">&nbsp;&#8372;</span></div>
+                    </div>
+                    <div class="single-itm-characteristics">
+                      <div class="single-itm-characteristic flex-row"><span class="single-itm-characteristic-title">Оригинальное названи:&emsp;</span><span class="single-itm-characteristic-val">Найк Бабочка Малина</span></div>
+                      <div class="single-itm-characteristic flex-row"><span class="single-itm-characteristic-title">Артикул:&emsp;</span><span class="single-itm-characteristic-val">22341567</span></div>
+                      <div class="single-itm-price hidden-xs">1200<span class="currency">&nbsp;&#8372;</span></div>
+                      <div class="single-itm-characteristic itms-in-row">
+                        <div class="single-itm-characteristic-title">Цвет:</div>
+                        <div class="single-itm-colors-wrapper">
+                          <!-- класс active у цвета товара, который на текущей странице--><a class="single-itm-color active" href="javascript:void(0);" style="background-image: url(img/itm-photos/blue.jpg);"></a><a class="single-itm-color" href="javascript:void(0);" style="background-image: url(img/itm-photos/pink.jpeg);"></a><a class="single-itm-color" href="javascript:void(0);" style="background-image: url(img/itm-photos/blue.jpg);"></a>
+                        </div>
+                      </div>
+                      <div class="single-itm-characteristic itms-in-col">
+                        <div class="single-itm-characteristic-title">Размер:</div>
+                        <!-- TODO: решить траблу с цветом цифр-->
+                        <div class="select-wrapper">
+                          <select class="selectpicker" title="Выберите размер">
+                            <option>36</option>
+                            <option>37</option>
+                            <option>38 - нет в наличии</option>
+                            <option>39</option>
+                            <option>40</option>
+                            <option>41</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="action-btns-wrapp">
+                        <div class="btns-row">
+                          <button class="add-to-cart btn btn-green btn-lg" type="button" data-toggle="modal" data-target="#chooseSizeModal">Добавить в корзину</button>
+                          <button class="favourite-btn" type="button" data-toggle="modal"><img src="img/icns/favourite.svg"></button>
+                        </div>
+                        <div class="btns-row">
+                          <button class="reserve-btn" type="button" data-toggle="modal" data-target="#addToReserveModal">Зарезервировать на 15 минут</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="single-itm-tabs single-itm-descr-tabs">
+                    <div class="nav-tabs-wrapper">
+                      <ul class="nav nav-tabs" role="tablist">
+                        <li class="active" role="presentation"><a href="#fullDescrTab" aria-controls="fullDescrTab" role="tab" data-toggle="tab">Описание</a></li>
+                        <li role="presentation"><a href="#fullCompTab" aria-controls="fullCompTab" role="tab" data-toggle="tab">Состав</a></li>
+                      </ul>
+                    </div>
+                    <div class="tab-content">
+                      <div class="tab-pane active" id="fullDescrTab" role="tabpanel">
+                        <p>Впервые представленные как кроссовки для бега нового поколения, кроссовки Nike Air Max Huarache являлись находкой для не профессиональных бегунов. В первую очередь благодаря революционной технологии амортизации, которая отныне стала видимой в блоке подошвы. Эта технология уникальна и нигде больше не используется. Согласно её инструкции специалисты компании Nike создают особый баллон. По инструкции он должен быть создан из полиуретанового пластика, затем его накачивают инертным газом. Затем вставляют в подошву.</p><br>
+                        <p>Этот баллон очень прочный. Он делает поистине невероятную амортизацию. Она важна для человека. Более того, именно на амортизацию необходимо в первую очередь обращать внимание при выборе беговой обуви. Все дело в том, что при ходьбе, прыжках и беге, в момент соприкосновения стопы с поверхностью происходит как-бы удар. Она дает нагрузку не только на стопы, но и на весь опорно-двигательный аппарат, а особенно на межпозвоночные диски. Поэтому, если Вы ходите или занимаетесь спортом в неправильной обуви, то могут быстро уставать ноги и болеть спина. Это может привести в непоправимым последствиям. Заботьтесь о своем здоровье, приобретайте обувь с хорошей амортизацией, которая будет поглощать ударную нагрузку.</p><br>
+                        <p>Сегодняшняя версия Nike Air Max Huarache остается верной своим корням, оставаясь эталоном комфорта, в то время как в настоящее время доступна в невероятном количестве цветов, комбинациях материалов, которые делают его гораздо более интересной покупкой, чем большинство современных линеек обуви.</p><br>
+                        <p>Эту обувь любят за её интересную внешность, но в ней самое её удобство. Помимо амортизации, у этих кроссовок очень много достоинств. Если Вы приобретете хотя бы одну пару, то узнаете о всех её достоинствах.</p>
+                      </div>
+                      <div class="tab-pane" id="fullCompTab" role="tabpanel">
+                        <p>Впервые представленные как кроссовки для бега нового поколения, кроссовки Nike Air Max Huarache являлись находкой для не профессиональных бегунов. В первую очередь благодаря революционной технологии амортизации, которая отныне стала видимой в блоке подошвы. Эта технология уникальна и нигде больше не используется. Согласно её инструкции специалисты компании Nike создают особый баллон. По инструкции он должен быть создан из полиуретанового пластика, затем его накачивают инертным газом. Затем вставляют в подошву.</p><br>
+                        <p>Сегодняшняя версия Nike Air Max Huarache остается верной своим корням, оставаясь эталоном комфорта, в то время как в настоящее время доступна в невероятном количестве цветов, комбинациях материалов, которые делают его гораздо более интересной покупкой, чем большинство современных линеек обуви.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- modal window "Choose Size"-->
+    <div class="modal fade" id="chooseSizeModal" tabindex="-1" role="dialog" aria-labelledby="addToFavouriteModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="close-wrapp">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><img src="img/icns/close.svg"></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-text-center">
+              <p>Выберите размер</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal window "Choose Size" End-->
+    <!-- modal window "Out Of Stock"-->
+    <div class="modal fade" id="outOfStock" tabindex="-1" role="dialog" aria-labelledby="addToFavouriteModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="close-wrapp">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><img src="img/icns/close.svg"></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-text-center">
+              <p>Когда товар появится в наличии,<br>Вам придет уведомление</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal window "Out Of Stock" End-->
+    <!-- modal window "Add To Cart"-->
+    <div class="modal fade" id="addToCartModal" tabindex="-1" role="dialog" aria-labelledby="addToCartModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="close-wrapp">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><img src="img/icns/close.svg"></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-text-center">
+              <p>Товар добавлен в Корзину</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal window "Add To Cart" End-->
+    <!-- modal window "Add To Favourite"-->
+    <div class="modal fade" id="addToFavouriteModal" tabindex="-1" role="dialog" aria-labelledby="addToFavouriteModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="close-wrapp">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><img src="img/icns/close.svg"></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-text-center">
+              <p>Товар добавлен<br>в Избранное</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal window "Add To Favourite" End-->
+    <!-- modal window "Remove From Favourite"-->
+    <div class="modal fade" id="removeFromFavouriteModal" tabindex="-1" role="dialog" aria-labelledby="addToFavouriteModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="close-wrapp">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><img src="img/icns/close.svg"></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-text-center">
+              <p>Товар удален<br>из Избранного</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal window "Remove From Favourite" End-->
+    <!-- modal window "Add To Reserve"-->
+    <div class="modal fade" id="addToReserveModal" tabindex="-1" role="dialog" aria-labelledby="addToReserveModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="close-wrapp">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><img src="img/icns/close.svg"></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-text-center">
+              <p>Товар зарезервирован.<br>Срок резерва - 15 минут</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal window "Add To Reserve" End-->
+    <!-- modal window "Can Not Add To Reserve"-->
+    <div class="modal fade" id="canNotToReserveModal" tabindex="-1" role="dialog" aria-labelledby="addToReserveModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="close-wrapp">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><img src="img/icns/close.svg"></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-text-center">
+              <p>Товар не может быть зарезервирован.<br>Лимит резерва - 5 пар</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal window "Can Not Add To Reserve" End-->
+    <!-- modal window "Invalid value"-->
+    <div class="modal fade" id="invalidValueModal" tabindex="-1" role="dialog" aria-labelledby="moderatMessModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="close-wrapp">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><img src="img/icns/close.svg"></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-text-center">
+              <p>Извините, это значение недопустимо</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal window "Invalid value" End-->
+    <!-- FOOTER START-->
+    <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#main-block"><span></span></a></div>
+    <!-- FOOTER END-->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-20">
+            <div class="footer-info">
+              <div class="left-part"><a class="logo" href="javascript:void(0);"><img src="img/logo-footer.svg" alt="MyMiles Logo"></a></div>
+              <div class="right-part">
+                <div class="footer-link-wrapper"><a class="footer-link" href="javascript:void(0);">Условия сотрудничества</a><a class="footer-link" href="javascript:void(0);">Наши контакты</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <!-- SCRIPTS START-->
+  <script src="js/jquery/jquery-2.2.4.min.js"></script>
+  <script src="js/bootstrap/bootstrap.min.js"></script>
+  <script src="js/bootstrap-validator/validator.min.js"></script>
+  <script src="js/bootstrap-select/bootstrap-select.min.js"></script>
+  <script src="js/ofi/ofi.min.js"></script>
+  <script src="js/jasny-bootstrap/js/jasny-bootstrap.min.js"></script>
+  <script src="js/bee3d/classie.js"></script>
+  <script src="js/bee3d/bee3d.js"></script>
+  <script src="js/common.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFgZRCElzR0MHQ9kNfHpMcFWwzbvSnZH0"></script>
+  <!-- SCRIPTS END-->
+  <!-- инициализация плагина каруселей-->
+  <script>
+    var sliderStudioPhotos = document.getElementById('sliderStudioPhotos');
+    var sliderLivePhotos = document.getElementById('sliderLivePhotos');
+    var slider1 = new Bee3D(sliderStudioPhotos, {
+        effect: 'coverflow',
+        listeners: {
+            keys: true,
+            touches: true,
+            clicks: true,
+            scroll: true,
+            drag: true
+        },
+        navigation: {
+            enabled: true,
+            next: '.bee3D--nav__next',
+            prev: '.bee3D--nav__prev'
+        },
+        loop: {
+            enabled: true,
+            continuous: true,
+            offset: 1
+        }
+    });
+    var slider2 = new Bee3D(sliderLivePhotos, {
+        effect: 'coverflow',
+        listeners: {
+            keys: true,
+            touches: true,
+            clicks: true,
+            scroll: true,
+            drag: true
+        },
+        navigation: {
+            enabled: true,
+            next: '.bee3D--nav__next-fill',
+            prev: '.bee3D--nav__prev-fill'
+        },
+        loop: {
+            enabled: true,
+            continuous: true,
+            offset: 1
+        }
+    });
+
+    $(document).on('click', '.bootstrap-select', function () {
+
+        //if ($('.bootstrap-select.btn-group .dropdown-menu li').hasClass('selected')) {
+        //    var rex = new RegExp("([0-9]+\.?[0-9]+)", "gm");
+        //$(this).html($(this).html().replace(rex, rex));
+        //}
+
+        if ($('.bootstrap-select.btn-group .dropdown-menu li a span:contains("нет в наличии")').parent().parent().hasClass('selected')) {
+            $('.action-btns-wrapp button.add-to-cart').html('Сообщить о наличии').attr('data-target', '#outOfStock');
+            $('.action-btns-wrapp button.reserve-btn').addClass('disable');
+        }
+        else {
+            $('.action-btns-wrapp button.add-to-cart').html('Добавить в корзину').attr('data-target', '#addToCartModal');
+            $('.action-btns-wrapp button.reserve-btn').removeClass('disable');
+        }
+    });
+    // single-itm-descr-tabs equal height
+    $(window).on('resize', function () {
+        var maxHeight = 0;
+        $(".single-itm-descr-tabs .tab-content .tab-pane").each(function () {
+            $(this).addClass("active");
+            var height = $(this).height();
+            maxHeight = height > maxHeight ? height : maxHeight;
+            $(this).removeClass("active");
+        });
+        $(".single-itm-descr-tabs .tab-content .tab-pane:first").addClass("active");
+        $(".single-itm-descr-tabs .tab-content").height(maxHeight);
+    });
+  </script>
+</html>
